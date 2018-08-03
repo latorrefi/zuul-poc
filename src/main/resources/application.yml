@@ -1,0 +1,12 @@
+zuul:
+  routes:
+    users:
+      path: /test/**
+      url: http://rest-service-jenkins.dxl-pre.vodafone.com/rest-service/greeting
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix: trace
