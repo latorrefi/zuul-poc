@@ -35,7 +35,9 @@ public class EnrichmentFilter extends ZuulFilter {
         HttpResponse<JsonNode> jsonResponse = null;
         try {
             jsonResponse = Unirest.get("http://rest-service-jenkins.dxl-pre.vodafone.com/rest-service/greeting").asJson();
+            System.out.println("###### Unirest ######");
             System.out.println(jsonResponse.getBody().toString());
+            System.out.println("#####################");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -43,7 +45,9 @@ public class EnrichmentFilter extends ZuulFilter {
         try {
             RestTemplate restTemplate = new RestTemplate();
             String result = restTemplate.getForObject("http://rest-service-jenkins.dxl-pre.vodafone.com/rest-service/greeting", String.class);
+            System.out.println("###### Resttemplate ######");
             System.out.println(result);
+            System.out.println("#####################");
         }catch (Exception ex){
             ex.printStackTrace();
         }
