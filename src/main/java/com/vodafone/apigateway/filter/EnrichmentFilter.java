@@ -31,26 +31,6 @@ public class EnrichmentFilter extends ZuulFilter {
     @Override
     public Object run() {
         RequestContext context = RequestContext.getCurrentContext();
-
-        HttpResponse<JsonNode> jsonResponse = null;
-        try {
-            jsonResponse = Unirest.get("http://rest-service-jenkins.dxl-pre.vodafone.com/rest-service/greeting").asJson();
-            System.out.println("###### Unirest ######");
-            System.out.println(jsonResponse.getBody().toString());
-            System.out.println("#####################");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        try {
-            RestTemplate restTemplate = new RestTemplate();
-            String result = restTemplate.getForObject("http://rest-service-jenkins.dxl-pre.vodafone.com/rest-service/greeting", String.class);
-            System.out.println("###### Resttemplate ######");
-            System.out.println(result);
-            System.out.println("#####################");
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }
         if (!Strings.isNullOrEmpty(context.getRequest().getHeader("x-port-forwarded-for"))
                 && !Strings.isNullOrEmpty(context.getRequest().getHeader("x-forwarded-for"))) {
             System.out.println(context.getRequest().getHeader("x-port-forwarded-for"));
