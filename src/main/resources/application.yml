@@ -2,7 +2,7 @@ zuul:
   routes:
     users:
       path: /test/**
-      url: https://webhook.site/8fa5898c-c35d-480c-91c2-3aa4c42887c4
+      url: http://rest-service-jenkins.dxl-pre.vodafone.com/rest-service/greeting
 
 
 logging:
