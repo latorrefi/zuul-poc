@@ -1,14 +1,9 @@
 package com.vodafone.apigateway.filter;
 
 import com.google.common.base.Strings;
-import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.JsonNode;
-import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
-import org.springframework.web.client.RestTemplate;
 
 public class EnrichmentFilter extends ZuulFilter {
 

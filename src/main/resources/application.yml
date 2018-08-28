@@ -2,7 +2,7 @@ zuul:
   routes:
     users:
       path: /test/**
-      url: http://rest-service-jenkins.dxl-pre.vodafone.com/rest-service/greeting
+      url: http://example.com/rest-service/greeting
 
 
 logging:
