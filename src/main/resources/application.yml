@@ -2,6 +2,7 @@ zuul:
   routes:
     users:
       path: /test/**
+      #write here the route of the called application
       url: http://example.com/rest-service/greeting
 
 
