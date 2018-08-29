@@ -1,4 +1,4 @@
-package com.vodafone.apigateway.filter;
+package com.example.apigateway.filter;
 
 import com.google.common.io.ByteStreams;
 import com.mashape.unirest.http.Headers;
